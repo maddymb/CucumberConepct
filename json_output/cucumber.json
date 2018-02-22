@@ -1,0 +1,155 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 18,
+        "name": "Create Contact Test",
+        "description": "",
+        "id": "freecrm-create-contact-feature;create-contact-test;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5624386709,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is already on Login Page",
+            "match": {
+              "location": "LoginStepDefinition.user_is_already_on_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13719470,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Title of Login Page is FreeCRM",
+            "match": {
+              "location": "LoginStepDefinition.title_of_Login_Page_is_FreeCRM()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 177312584,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters Uname \"maddymb\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "maddymb",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginStepDefinition.user_enters_User_Name(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 116554753,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters Pass \"madhur123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "madhur123",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginStepDefinition.user_enters_Password(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1857595208,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User clicks on Login Button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_on_Login_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3016465695,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify User is on Home Page",
+            "match": {
+              "location": "LoginStepDefinition.verify_User_is_on_Home_Page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1011124721,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User goes to Create Contact Page",
+            "match": {
+              "location": "LoginStepDefinition.user_goes_to_Create_Contact_Page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 427014429,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters contact details \"Madhur\" and \"Bharadwaj\" and \"Ceo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Madhur",
+                  "offset": 29
+                },
+                {
+                  "val": "Bharadwaj",
+                  "offset": 42
+                },
+                {
+                  "val": "Ceo",
+                  "offset": 58
+                }
+              ],
+              "location": "LoginStepDefinition.user_enters_contact_details_and_and(String,String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "FreeCRM Create Contact Feature",
+    "description": "",
+    "id": "freecrm-create-contact-feature",
+    "keyword": "Feature",
+    "uri": "/Users/maddy/eclipse-workspace/CucumberConcepts/src/main/java/com/features/contact.feature"
+  }
+]

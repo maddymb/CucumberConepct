@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="12.244174">
+<testcase classname="FreeCRM Create Contact Feature" name="Create Contact Test" time="12.244174">
+<system-out><![CDATA[Given User is already on Login Page.........................................passed
+When Title of Login Page is FreeCRM.........................................passed
+Then User enters Uname "maddymb"............................................passed
+And User enters Pass "madhur123"............................................passed
+And User clicks on Login Button.............................................passed
+And Verify User is on Home Page.............................................passed
+Then User goes to Create Contact Page.......................................passed
+Then user enters contact details "Madhur" and "Bharadwaj" and "Ceo".........passed
+]]></system-out>
+</testcase>
+</testsuite>
