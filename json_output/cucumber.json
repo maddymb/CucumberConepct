@@ -1,155 +1,178 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 18,
-        "name": "Create Contact Test",
+        "line": 5,
+        "name": "Login with correct username and correct password",
         "description": "",
-        "id": "freecrm-create-contact-feature;create-contact-test;;2",
+        "id": "free-crm-application-testing;login-with-correct-username-and-correct-password",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 5624386709,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "User is already on Login Page",
-            "match": {
-              "location": "LoginStepDefinition.user_is_already_on_Login_Page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 13719470,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "Title of Login Page is FreeCRM",
-            "match": {
-              "location": "LoginStepDefinition.title_of_Login_Page_is_FreeCRM()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 177312584,
+              "duration": 235381552,
               "status": "passed"
             },
             "line": 6,
-            "name": "User enters Uname \"maddymb\"",
+            "name": "This is a valid login test",
             "match": {
-              "arguments": [
-                {
-                  "val": "maddymb",
-                  "offset": 19
-                }
-              ],
-              "location": "LoginStepDefinition.user_enters_User_Name(String)"
+              "location": "TaggingStepDefinition.this_is_a_valid_login_test()"
             },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "Then "
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@SmokeTest"
           },
           {
-            "result": {
-              "duration": 116554753,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "User enters Pass \"madhur123\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "madhur123",
-                  "offset": 18
-                }
-              ],
-              "location": "LoginStepDefinition.user_enters_Password(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
+            "line": 4,
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Create a deal",
+        "description": "",
+        "id": "free-crm-application-testing;create-a-deal",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
           {
             "result": {
-              "duration": 1857595208,
+              "duration": 144924,
               "status": "passed"
             },
-            "line": 8,
-            "name": "User clicks on Login Button",
+            "line": 18,
+            "name": "This is a deal test case",
             "match": {
-              "location": "LoginStepDefinition.user_clicks_on_Login_Button()"
+              "location": "TaggingStepDefinition.this_is_a_deal_test_case()"
             },
-            "keyword": "And "
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@SmokeTest"
           },
           {
-            "result": {
-              "duration": 3016465695,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "Verify User is on Home Page",
-            "match": {
-              "location": "LoginStepDefinition.verify_User_is_on_Home_Page()"
-            },
-            "keyword": "And "
-          },
+            "line": 16,
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "Verify left panel links",
+        "description": "",
+        "id": "free-crm-application-testing;verify-left-panel-links",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
           {
             "result": {
-              "duration": 1011124721,
+              "duration": 120742,
               "status": "passed"
             },
-            "line": 10,
-            "name": "User goes to Create Contact Page",
+            "line": 30,
+            "name": "clicking on left panel links",
             "match": {
-              "location": "LoginStepDefinition.user_goes_to_Create_Contact_Page()"
+              "location": "TaggingStepDefinition.clicking_on_left_panel_links()"
             },
-            "keyword": "Then "
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 28,
+            "name": "@SmokeTest"
           },
           {
+            "line": 28,
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "line": 41,
+        "name": "Search a case",
+        "description": "",
+        "id": "free-crm-application-testing;search-a-case",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
             "result": {
-              "duration": 427014429,
+              "duration": 141927,
               "status": "passed"
             },
-            "line": 11,
-            "name": "user enters contact details \"Madhur\" and \"Bharadwaj\" and \"Ceo\"",
+            "line": 42,
+            "name": "This is a search case test",
             "match": {
-              "arguments": [
-                {
-                  "val": "Madhur",
-                  "offset": 29
-                },
-                {
-                  "val": "Bharadwaj",
-                  "offset": 42
-                },
-                {
-                  "val": "Ceo",
-                  "offset": 58
-                }
-              ],
-              "location": "LoginStepDefinition.user_enters_contact_details_and_and(String,String,String)"
+              "location": "TaggingStepDefinition.this_is_a_search_case_test()"
             },
-            "matchedColumns": [
-              2,
-              3,
-              4
-            ],
-            "keyword": "Then "
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 40,
+            "name": "@SmokeTest"
+          },
+          {
+            "line": 40,
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "line": 45,
+        "name": "Search a task",
+        "description": "",
+        "id": "free-crm-application-testing;search-a-task",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 163290,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "This is a search task test",
+            "match": {
+              "location": "TaggingStepDefinition.this_is_a_search_task_test()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 44,
+            "name": "@SmokeTest"
+          },
+          {
+            "line": 44,
+            "name": "@RegressionTest"
           }
         ]
       }
     ],
-    "name": "FreeCRM Create Contact Feature",
+    "name": "Free CRM application testing",
     "description": "",
-    "id": "freecrm-create-contact-feature",
+    "id": "free-crm-application-testing",
     "keyword": "Feature",
-    "uri": "/Users/maddy/eclipse-workspace/CucumberConcepts/src/main/java/com/features/contact.feature"
+    "uri": "/Users/maddy/eclipse-workspace/CucumberConcepts/src/main/java/com/features/tagging.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@FunctionalTest"
+      }
+    ]
   }
 ]

@@ -1,5 +1,7 @@
-/*
 package com.stepDefinitions;
+
+import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -7,12 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class LoginStepDefinition {
+public class DealsWithMapStepDefinition {
 
 	WebDriver driver;
 	
@@ -36,20 +39,15 @@ System.setProperty("webdriver.chrome.driver", "/Users/maddy/Documents/Selenium/J
 		
 	}
 
-	@Then("^User enters Uname \"(.*)\"$")
-	public void user_enters_User_Name(String uname) {
-	    driver.findElement(By.name("username")).sendKeys(uname);
-		
+	@Then("^User enters Uname and password$")
+	public void user_enters_Uname_and_password(DataTable credentials) {
+	   
+		for(Map<String, String> value: credentials.asMaps(String.class, String.class)) {
+		driver.findElement(By.name("username")).sendKeys(value.get("username"));
+		driver.findElement(By.name("password")).sendKeys(value.get("password"));
+		}
 	}
-
-	
-	 
-	@Then("^User enters Pass \"(.*)\"$")
-	public void user_enters_Password(String pass) {
-	 System.out.println(pass);
-		 driver.findElement(By.name("password")).sendKeys(pass);
-	}
-	
+ 	
 
 	@Then("^User clicks on Login Button$")
 	public void user_clicks_on_Login_Button()  {
@@ -70,25 +68,27 @@ System.setProperty("webdriver.chrome.driver", "/Users/maddy/Documents/Selenium/J
 	}
 
 
-	@Then("^User goes to Create Contact Page$")
-	public void user_goes_to_Create_Contact_Page()  {
-	   driver.switchTo().frame("mainpanel");
-	    Actions as=new Actions(driver);
-	    as.moveToElement(driver.findElement(By.xpath("//a[@title=\"Contacts\"]")));
-	    as.build().perform();
-	    driver.findElement(By.xpath("//a[@title='New Contact']")).click();
+	@Then("^User goes to Deals Page$")
+	public void user_goes_to_Deals_Page() throws InterruptedException {
+		driver.switchTo().frame("mainpanel");
 	    
-		
 	}
 
-	@Then("^user enters contact details \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void user_enters_contact_details_and_and(String fname, String lname, String position) throws Throwable {
-
-		driver.findElement(By.id("first_name")).sendKeys(fname);
-		driver.findElement(By.id("surname")).sendKeys(lname);
-		driver.findElement(By.id("company_position")).sendKeys(position);
-		driver.quit();
-	   
+	@Then("^user enters deals details$")
+	public void user_enters_deals_details(DataTable dealsValue) throws InterruptedException  {
+		
+		for(Map<String, String> value: dealsValue.asMaps(String.class, String.class)) {
+		Actions as=new Actions(driver);
+		as.moveToElement(driver.findElement(By.xpath("//a[@title=\"Deals\"]")));
+		as.build().perform();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@title='New Deal']")).click();
+		driver.findElement(By.id("title")).sendKeys(value.get("title"));
+		driver.findElement(By.id("amount")).sendKeys(value.get("amount"));
+		driver.findElement(By.id("probability")).sendKeys(value.get("probability"));
+		driver.findElement(By.xpath("//input[@type='submit' and @value='Save']")).click();
+		}driver.quit();
+		
 	}
 	
 	
@@ -96,4 +96,3 @@ System.setProperty("webdriver.chrome.driver", "/Users/maddy/Documents/Selenium/J
 	
 	
 }
-*/
